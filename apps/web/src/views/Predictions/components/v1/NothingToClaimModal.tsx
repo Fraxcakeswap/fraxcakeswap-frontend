@@ -1,19 +1,19 @@
-import { useEffect, useState } from 'react'
-import { useAccount } from 'wagmi'
-import { styled } from 'styled-components'
-import {
-  ModalContainer,
-  ModalBody,
-  ModalTitle,
-  ModalHeader,
-  InjectedModalProps,
-  Text,
-  Heading,
-  ModalCloseButton,
-  Button,
-  AutoRenewIcon,
-} from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
+import {
+  AutoRenewIcon,
+  Button,
+  Heading,
+  InjectedModalProps,
+  ModalBody,
+  ModalCloseButton,
+  ModalContainer,
+  ModalHeader,
+  ModalTitle,
+  Text,
+} from '@pancakeswap/uikit'
+import { useEffect, useState } from 'react'
+import { styled } from 'styled-components'
+import { useAccount } from 'wagmi'
 import { getAllV1History } from './helpers'
 
 const Modal = styled(ModalContainer)`

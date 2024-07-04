@@ -242,6 +242,13 @@ export const USDC = {
   [ChainId.BSC]: USDC_BSC,
   [ChainId.BSC_TESTNET]: USDC_TESTNET,
   [ChainId.ETHEREUM]: USDC_ETH,
+  [ChainId.FRAX_TESTNET]: new ERC20Token(
+    ChainId.FRAX_TESTNET,
+    '0x54D2E2661c5a9381e17c89e564cbC0d456703f1b',
+    18,
+    'TUSDC',
+    'Test USDC',
+  ),
   [ChainId.GOERLI]: USDC_GOERLI,
   [ChainId.ZKSYNC]: new ERC20Token(ChainId.ZKSYNC, '0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4', 6, 'USDC', 'USD Coin'),
   [ChainId.ZKSYNC_TESTNET]: new ERC20Token(
@@ -307,6 +314,13 @@ export const USDC = {
 export const USDT = {
   [ChainId.BSC]: USDT_BSC,
   [ChainId.ETHEREUM]: USDT_ETH,
+  [ChainId.FRAX_TESTNET]: new ERC20Token(
+    ChainId.FRAX_TESTNET,
+    '0x876ffdc5f2aa8c4927a0aea52b150e112f6ddff6',
+    18,
+    'TUSDT',
+    'Test USDT',
+  ),
   [ChainId.ARBITRUM_ONE]: new ERC20Token(
     ChainId.ARBITRUM_ONE,
     '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
@@ -365,6 +379,7 @@ export const STABLE_COIN = {
   [ChainId.GOERLI]: USDC[ChainId.GOERLI],
   [ChainId.BSC]: USDT[ChainId.BSC],
   [ChainId.BSC_TESTNET]: BUSD[ChainId.BSC_TESTNET],
+  [ChainId.FRAX_TESTNET]: USDT[ChainId.FRAX_TESTNET], // ToDo:: change to valid one
   [ChainId.ARBITRUM_ONE]: USDC[ChainId.ARBITRUM_ONE],
   [ChainId.ARBITRUM_GOERLI]: USDC[ChainId.ARBITRUM_GOERLI],
   [ChainId.ZKSYNC]: USDC[ChainId.ZKSYNC],

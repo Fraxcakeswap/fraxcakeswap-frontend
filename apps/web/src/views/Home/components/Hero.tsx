@@ -12,7 +12,7 @@ import { checkIsIOS } from '../hooks/useIsIOS'
 import { SlideSvgDark, SlideSvgLight } from './SlideSvg'
 
 const BgWrapper = styled.div`
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -161,6 +161,7 @@ const Hero = () => {
             <StyledText1 display="inline-block" lineHeight="110%" fontWeight={600} color="contrast" mr="8px">
               {t('All-in-one DEX With')}
             </StyledText1>
+            <br />
             <StyledText
               display="inline-block"
               fontWeight={600}
@@ -168,11 +169,7 @@ const Hero = () => {
               color="secondary"
               mr={isMobile ? 0 : '8px'}
             >
-              {t('Permissionless Pools')}
-            </StyledText>
-            <br />
-            <StyledText display="inline-block" lineHeight="110%" fontWeight={600} color="contrast">
-              {t('on')}
+              {t('V4 to Fraxtal')}
             </StyledText>
           </Text>
           <StyledText2
@@ -183,7 +180,7 @@ const Hero = () => {
             lineHeight="110%"
             fontWeight={600}
           >
-            {t('Trade, earn, and own various crypto in a trustworthy environment with user-friendly interface.')}
+            {t('The conjunction of retail and institutional investor')}
           </StyledText2>
           <Flex justifyContent={isMobile || isMd ? 'center' : 'start'}>
             {!account && <ConnectWalletButton style={{ borderRadius: isXs ? 12 : undefined }} scale="md" mr="8px" />}

@@ -46,6 +46,7 @@ export async function farmV3FetchFarms({
         functionName: 'latestAnswer',
       })
       .then((res) => formatUnits(res, 8)),
+    // formatUnits(BigInt(100), 8),
     fetchV3Pools(farms, chainId, provider),
   ])
 
@@ -222,7 +223,7 @@ const fetchPoolInfos = async (
 
     const masterChefMultiCallResult = await provider({ chainId }).multicall({
       contracts: calls,
-      allowFailure: false,
+      allowFailure: true,
     })
 
     let masterChefChunkedResultCounter = 0

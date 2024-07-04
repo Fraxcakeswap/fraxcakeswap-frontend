@@ -50,6 +50,42 @@ const bsc = {
   },
 } satisfies Chain
 
+export const fraxTestnet = {
+  id: 2522,
+  name: 'Fraxtal Testnet L2',
+  network: 'holesky',
+  nativeCurrency: {
+    name: 'FraxEther',
+    symbol: 'FRXETH',
+    decimals: 18,
+  },
+  rpcUrls: {
+    default: {
+      http: ['https://rpc.testnet.frax.com'],
+    },
+    public: {
+      http: ['https://rpc.testnet.frax.com'],
+    },
+  },
+  blockExplorers: {
+    etherscan: {
+      name: 'Fraxscan',
+      url: 'https://holesky.fraxscan.com/',
+    },
+    default: {
+      name: 'Fraxscan',
+      url: 'https://holesky.fraxscan.com/',
+    },
+  },
+  contracts: {
+    multicall3: {
+      address: '0xcA11bde05977b3631167028862bE2a173976CA11',
+      blockCreated: 0,
+    },
+  },
+  testnet: true,
+} satisfies Chain
+
 /**
  * Controls some L2 specific behavior, e.g. slippage tolerance, special UI behavior.
  * The expectation is that all of these networks have immediate transaction confirmation.
@@ -67,12 +103,14 @@ export const L2_CHAIN_IDS: ChainId[] = [
   ChainId.BASE_TESTNET,
   ChainId.OPBNB,
   ChainId.OPBNB_TESTNET,
+  ChainId.FRAX_TESTNET,
 ]
 
 export const CHAINS = [
   bsc,
   mainnet,
   bscTestnet,
+  fraxTestnet,
   goerli,
   polygonZkEvm,
   polygonZkEvmTestnet,
